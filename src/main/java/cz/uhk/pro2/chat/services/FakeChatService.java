@@ -6,6 +6,7 @@ import cz.uhk.pro2.chat.model.Room;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class FakeChatService implements ChatService {
 
@@ -13,7 +14,7 @@ public class FakeChatService implements ChatService {
 
     @Override
     public boolean login(String username, String password) {
-        return true;
+        return username.equals("admin") && password.equals("admin");
     }
 
     @Override
@@ -28,7 +29,7 @@ public class FakeChatService implements ChatService {
 
     @Override
     public List<Message> getMyMessages(int roomId) {
-        //TODO: show only messages from me
+
         return Collections.unmodifiableList(messages);
     }
 
