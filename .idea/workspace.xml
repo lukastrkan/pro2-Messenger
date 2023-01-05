@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b82d3e63-c9be-490b-b6a1-7629553544f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/HttpChatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/ChatMainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/ChatMainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/gui/ChatTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/gui/ChatTableModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/FakeChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/FakeChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/HttpChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/HttpChatService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,8 @@
       <workItem from="1670248388162" duration="45000" />
       <workItem from="1670416186757" duration="229000" />
       <workItem from="1670482745078" duration="5976000" />
-      <workItem from="1671087648308" duration="884000" />
+      <workItem from="1671087648308" duration="4097000" />
+      <workItem from="1671097420781" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1669804531596</created>
@@ -101,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670244328612</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="chat">
+      <created>1671088592837</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671088592837</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,20 +117,31 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="chat" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/ChatMainWindow.java</url>
-          <line>40</line>
+          <line>42</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/HttpChatService.java</url>
-          <line>25</line>
+          <line>23</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/HttpChatService.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cz/uhk/pro2/chat/services/HttpChatService.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

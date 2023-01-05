@@ -8,8 +8,6 @@ import cz.uhk.pro2.chat.model.Message;
 import cz.uhk.pro2.chat.model.Room;
 import org.apache.http.client.fluent.Form;
 import org.apache.http.client.fluent.Request;
-import org.apache.http.client.fluent.Response;
-import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
 import java.util.List;
@@ -23,8 +21,8 @@ public class HttpChatService implements ChatService {
 
         String response = null;
         try {
-            var x = Request.Post("https://chat-http-server.herokuapp.com/login")
-                    .bodyForm(data).execute();
+            response = Request.Post("https://chat-http-server.herokuapp.com/login")
+                    .bodyForm(data).execute().returnContent().asString();
             if (response.equals("")) {
                 return false;
             } else {
@@ -44,7 +42,7 @@ public class HttpChatService implements ChatService {
                     .bodyForm(
                             Form.form().add("token", token)
                                     .add("to", message.getTo())
-                                    .add("text", message.getMsg())
+                                    .add("text", message.getText())
                                     .add("roomId", String.valueOf(roomId))
                                     .build()).execute();
         } catch (IOException e) {
@@ -66,8 +64,7 @@ public class HttpChatService implements ChatService {
             ObjectMapper mapper = new ObjectMapper().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                     .registerModule(new JavaTimeModule());
 
-            return mapper.readValue(jsonStr, new TypeReference<List<Message>>() {
-            });
+            return mapper.readValue(jsonStr, new TypeReference<List<Message>>() {});
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -6,14 +6,14 @@ import java.time.LocalDateTime;
 public class Message {
     private String from;
     private String to;
-    private String msg;
-    private LocalDateTime datetime;
+    private String text;
+    private LocalDateTime localDateTime;
 
-    public Message(String from, String to, String msg, LocalDateTime datetime) {
+    public Message(String from, String to, String text, LocalDateTime localDateTime) {
         this.from = from;
         this.to = to;
-        this.msg = msg;
-        this.datetime = datetime;
+        this.text = text;
+        this.localDateTime = localDateTime;
     }
 
     public Message(){}
@@ -26,12 +26,12 @@ public class Message {
         return to;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getText() {
+        return text;
     }
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
     }
 
     @Override
@@ -39,8 +39,24 @@ public class Message {
         return "Message{" +
                 "from='" + from + '\'' +
                 ", to='" + to + '\'' +
-                ", msg='" + msg + '\'' +
-                ", datetime=" + datetime +
+                ", msg='" + text + '\'' +
+                ", datetime=" + localDateTime +
                 '}';
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
+
+    public void setTo(String to) {
+        this.to = to;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
     }
 }

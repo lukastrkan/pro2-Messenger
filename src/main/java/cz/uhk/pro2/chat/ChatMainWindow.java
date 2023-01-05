@@ -20,6 +20,8 @@ public class ChatMainWindow extends javax.swing.JFrame {
     private ChatService chatService = new HttpChatService();
     private int roomId = 2;
 
+    private Timer timer;
+
     public ChatMainWindow() {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
@@ -50,17 +52,16 @@ public class ChatMainWindow extends javax.swing.JFrame {
 
         String username = JOptionPane.showInputDialog("Enter username");
         String password = JOptionPane.showInputDialog("Enter password");
-        //var success = chatService.login(username, password);
-        /*if (!success) {
+        var success = chatService.login(username, password);
+        if (!success) {
             JOptionPane.showMessageDialog(this, "Login failed");
             System.exit(1);
-        }*/
+        }
 
-        Timer timer = new Timer(2000, e -> {
+        timer = new Timer(2000, e -> {
             System.out.println("Tick");
              refreshMessages();
         });
-
         timer.start();
 
         //createFakeMessages();
@@ -78,7 +79,9 @@ public class ChatMainWindow extends javax.swing.JFrame {
     }
 
     private void refreshMessages() {
+        messages.clear();
         messages.addAll(chatService.getMyMessages(roomId));
+        chatTableModel.fireTableDataChanged();
     }
 
     public static void main(String[] args) {

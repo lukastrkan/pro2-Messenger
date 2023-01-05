@@ -31,7 +31,7 @@ public class ChatTableModel extends AbstractTableModel {
             case 1:
                 return messages.get(rowIndex).getTo();
             case 2:
-                return messages.get(rowIndex).getMsg();
+                return messages.get(rowIndex).getText();
             default:
                 throw new IllegalArgumentException("Invalid column index");
         }
